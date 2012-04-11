@@ -28,25 +28,35 @@
     
 	UIButton *button1 = [[UIButton alloc] init];
     [button1 setBackgroundColor:[UIColor redColor]];
+    [button1 setTitle:@"Button1" forState:UIControlStateNormal];
     [button1 addTarget:self action:@selector(handleButton1:) forControlEvents:UIControlEventTouchUpInside];
     [subMenu addObject:button1];
     
     UIButton *button2 = [[UIButton alloc] init];
     [button2 setBackgroundColor:[UIColor blueColor]];
+    [button2 setTitle:@"Button2" forState:UIControlStateNormal];
     [button2 addTarget:self action:@selector(handleButton2:) forControlEvents:UIControlEventTouchUpInside];
     [subMenu addObject:button2];
     
     UIButton *button3 = [[UIButton alloc] init];
     [button3 setBackgroundColor:[UIColor greenColor]];
+    [button3 setTitle:@"Button3" forState:UIControlStateNormal];
     [button3 addTarget:self action:@selector(handleButton3:) forControlEvents:UIControlEventTouchUpInside];
     [subMenu addObject:button3];
     
     UIButton *button4 = [[UIButton alloc] init];
     [button4 setBackgroundColor:[UIColor yellowColor]];
+    [button4 setTitle:@"Button4" forState:UIControlStateNormal];
+    [button4 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [button4 addTarget:self action:@selector(handleButton4:) forControlEvents:UIControlEventTouchUpInside];
     [subMenu addObject:button4];
     
-    _menu = [[SlideyMenuGuy alloc] init:self.view withButtons:subMenu];
+    UIButton *mainMenu = [[UIButton alloc] init];
+    [mainMenu setBackgroundColor:[UIColor blackColor]];
+    [mainMenu setTitle:@"Menu" forState:UIControlStateNormal];
+    [mainMenu setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    
+    _menu = [[SlideyMenuGuy alloc] init:self.view withMain:mainMenu withSubMenus:subMenu];
     [_menu displayMenu];
 }
 

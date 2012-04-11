@@ -10,7 +10,7 @@
 
 @interface SlideyMenuGuy : NSObject
 
-- (id)init:(UIView*)holder withButtons:(NSArray*)subMenu;
+- (id)init:(UIView*)holder withMain:(UIButton*)mainMenu withSubMenus:(NSArray*)subMenus;
 - (void) displayMenu;
 
 @end

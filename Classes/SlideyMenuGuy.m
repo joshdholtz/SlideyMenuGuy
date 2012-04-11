@@ -12,7 +12,7 @@
 
 @property (nonatomic, strong) UIView *holder;
 
-@property (nonatomic, strong) UIButton *rootMenu;
+@property (nonatomic, strong) UIButton *mainMenu;
 @property (nonatomic, strong) UIButton *clearLayer;
 @property (nonatomic, strong) NSArray *subMenus;
 
@@ -22,18 +22,21 @@
 
 @synthesize holder = _holder;
 
-@synthesize rootMenu = _rootMenu;
+@synthesize mainMenu = _mainMenu;
 @synthesize clearLayer = _clearLayer;
 @synthesize subMenus = _subMenus;
 
-- (id)init:(UIView*)holder withButtons:(NSArray*)subMenu {
+- (id)init:(UIView*)holder withMain:(UIButton*)mainMenu withSubMenus:(NSArray*)subMenus {
     self = [super init];
     if (self) {
         _holder = holder;
-        _subMenus = subMenu;
+        _mainMenu = mainMenu;
+        _subMenus = subMenus;
+        
+        float y = _holder.frame.size.height - 50;
+        _mainMenu.frame = CGRectMake(0, y, 60, 50);
         
         if ([_subMenus count] > 0) {
-            float y = _holder.frame.size.height - 50;
             float subMenuWidth = _holder.frame.size.width / [_subMenus count];
             
             for (int i = 0; i < [_subMenus count]; i++) {
@@ -50,19 +53,18 @@
     float x = 0;
     float y = _holder.frame.size.height - 50;
     
-    _rootMenu = [[UIButton alloc] initWithFrame:CGRectMake(x, y, 60, 50)];
-    [_rootMenu setBackgroundColor:[UIColor blackColor]];
     
-    [_rootMenu addTarget:self action:@selector(expandMenu:) forControlEvents:UIControlEventTouchUpInside];
     
-    [_holder addSubview:_rootMenu];
+    [_mainMenu addTarget:self action:@selector(expandMenu:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [_holder addSubview:_mainMenu];
     
 }
 
 - (void) expandMenu:(id)sender {
     NSLog(@"In expandMenu");
     
-    [_rootMenu removeTarget:self action:@selector(expandMenu:) forControlEvents:UIControlEventTouchUpInside];
+    [_mainMenu removeTarget:self action:@selector(expandMenu:) forControlEvents:UIControlEventTouchUpInside];
     
     _clearLayer = [[UIButton alloc] initWithFrame:_holder.frame];
     [_clearLayer setBackgroundColor:[UIColor clearColor]];
@@ -74,7 +76,7 @@
     
     [UIView animateWithDuration:0.25 
                      animations:^{
-                         _rootMenu.frame = CGRectMake(x, y, 60, 50);
+                         _mainMenu.frame = CGRectMake(x, y, 60, 50);
                      }
                      completion:^(BOOL finished){
                          NSLog(@"Completed");
@@ -104,7 +106,7 @@
 - (void) colapseMenu:(id)sender {
     NSLog(@"In expandMenu");
     
-    [_rootMenu addTarget:self action:@selector(expandMenu:) forControlEvents:UIControlEventTouchUpInside];
+    [_mainMenu addTarget:self action:@selector(expandMenu:) forControlEvents:UIControlEventTouchUpInside];
     
     [_clearLayer removeFromSuperview];
     
@@ -121,7 +123,7 @@
     
     [UIView animateWithDuration:0.25
                      animations:^{
-                         _rootMenu.frame = CGRectMake(x, y, 60, 50);
+                         _mainMenu.frame = CGRectMake(x, y, 60, 50);
                      }];
 }
 
