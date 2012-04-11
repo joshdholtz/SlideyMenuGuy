@@ -1,0 +1,309 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03D9DE1B153552F600A02D52 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03D9DE1A153552F600A02D52 /* UIKit.framework */; };
+		03D9DE1D153552F600A02D52 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03D9DE1C153552F600A02D52 /* Foundation.framework */; };
+		03D9DE1F153552F600A02D52 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03D9DE1E153552F600A02D52 /* CoreGraphics.framework */; };
+		03D9DE25153552F600A02D52 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 03D9DE23153552F600A02D52 /* InfoPlist.strings */; };
+		03D9DE27153552F600A02D52 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D9DE26153552F600A02D52 /* main.m */; };
+		03D9DE2B153552F600A02D52 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D9DE2A153552F600A02D52 /* AppDelegate.m */; };
+		03D9DE2E153552F600A02D52 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03D9DE2C153552F600A02D52 /* MainStoryboard_iPhone.storyboard */; };
+		03D9DE31153552F600A02D52 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03D9DE2F153552F600A02D52 /* MainStoryboard_iPad.storyboard */; };
+		03D9DE34153552F600A02D52 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D9DE33153552F600A02D52 /* ViewController.m */; };
+		03D9DE3C1535534E00A02D52 /* SlideyMenuGuy.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D9DE3B1535534E00A02D52 /* SlideyMenuGuy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		03D9DE16153552F600A02D52 /* SlideyMenuGuy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlideyMenuGuy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		03D9DE1A153552F600A02D52 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		03D9DE1C153552F600A02D52 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		03D9DE1E153552F600A02D52 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		03D9DE22153552F600A02D52 /* SlideyMenuGuy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SlideyMenuGuy-Info.plist"; sourceTree = "<group>"; };
+		03D9DE24153552F600A02D52 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		03D9DE26153552F600A02D52 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		03D9DE28153552F600A02D52 /* SlideyMenuGuy-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SlideyMenuGuy-Prefix.pch"; sourceTree = "<group>"; };
+		03D9DE29153552F600A02D52 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		03D9DE2A153552F600A02D52 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		03D9DE2D153552F600A02D52 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		03D9DE30153552F600A02D52 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		03D9DE32153552F600A02D52 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		03D9DE33153552F600A02D52 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		03D9DE3A1535534E00A02D52 /* SlideyMenuGuy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SlideyMenuGuy.h; path = Classes/SlideyMenuGuy.h; sourceTree = "<group>"; };
+		03D9DE3B1535534E00A02D52 /* SlideyMenuGuy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SlideyMenuGuy.m; path = Classes/SlideyMenuGuy.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		03D9DE13153552F600A02D52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03D9DE1B153552F600A02D52 /* UIKit.framework in Frameworks */,
+				03D9DE1D153552F600A02D52 /* Foundation.framework in Frameworks */,
+				03D9DE1F153552F600A02D52 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03D9DE0B153552F600A02D52 = {
+			isa = PBXGroup;
+			children = (
+				03D9DE3D1535535300A02D52 /* Classes */,
+				03D9DE20153552F600A02D52 /* SlideyMenuGuy */,
+				03D9DE19153552F600A02D52 /* Frameworks */,
+				03D9DE17153552F600A02D52 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		03D9DE17153552F600A02D52 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				03D9DE16153552F600A02D52 /* SlideyMenuGuy.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		03D9DE19153552F600A02D52 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03D9DE1A153552F600A02D52 /* UIKit.framework */,
+				03D9DE1C153552F600A02D52 /* Foundation.framework */,
+				03D9DE1E153552F600A02D52 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		03D9DE20153552F600A02D52 /* SlideyMenuGuy */ = {
+			isa = PBXGroup;
+			children = (
+				03D9DE29153552F600A02D52 /* AppDelegate.h */,
+				03D9DE2A153552F600A02D52 /* AppDelegate.m */,
+				03D9DE2C153552F600A02D52 /* MainStoryboard_iPhone.storyboard */,
+				03D9DE2F153552F600A02D52 /* MainStoryboard_iPad.storyboard */,
+				03D9DE32153552F600A02D52 /* ViewController.h */,
+				03D9DE33153552F600A02D52 /* ViewController.m */,
+				03D9DE21153552F600A02D52 /* Supporting Files */,
+			);
+			path = SlideyMenuGuy;
+			sourceTree = "<group>";
+		};
+		03D9DE21153552F600A02D52 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				03D9DE22153552F600A02D52 /* SlideyMenuGuy-Info.plist */,
+				03D9DE23153552F600A02D52 /* InfoPlist.strings */,
+				03D9DE26153552F600A02D52 /* main.m */,
+				03D9DE28153552F600A02D52 /* SlideyMenuGuy-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		03D9DE3D1535535300A02D52 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				03D9DE3A1535534E00A02D52 /* SlideyMenuGuy.h */,
+				03D9DE3B1535534E00A02D52 /* SlideyMenuGuy.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		03D9DE15153552F600A02D52 /* SlideyMenuGuy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03D9DE37153552F600A02D52 /* Build configuration list for PBXNativeTarget "SlideyMenuGuy" */;
+			buildPhases = (
+				03D9DE12153552F600A02D52 /* Sources */,
+				03D9DE13153552F600A02D52 /* Frameworks */,
+				03D9DE14153552F600A02D52 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SlideyMenuGuy;
+			productName = SlideyMenuGuy;
+			productReference = 03D9DE16153552F600A02D52 /* SlideyMenuGuy.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		03D9DE0D153552F600A02D52 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 03D9DE10153552F600A02D52 /* Build configuration list for PBXProject "SlideyMenuGuy" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 03D9DE0B153552F600A02D52;
+			productRefGroup = 03D9DE17153552F600A02D52 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				03D9DE15153552F600A02D52 /* SlideyMenuGuy */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		03D9DE14153552F600A02D52 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03D9DE25153552F600A02D52 /* InfoPlist.strings in Resources */,
+				03D9DE2E153552F600A02D52 /* MainStoryboard_iPhone.storyboard in Resources */,
+				03D9DE31153552F600A02D52 /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		03D9DE12153552F600A02D52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03D9DE27153552F600A02D52 /* main.m in Sources */,
+				03D9DE2B153552F600A02D52 /* AppDelegate.m in Sources */,
+				03D9DE34153552F600A02D52 /* ViewController.m in Sources */,
+				03D9DE3C1535534E00A02D52 /* SlideyMenuGuy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		03D9DE23153552F600A02D52 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				03D9DE24153552F600A02D52 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		03D9DE2C153552F600A02D52 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				03D9DE2D153552F600A02D52 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		03D9DE2F153552F600A02D52 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				03D9DE30153552F600A02D52 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		03D9DE35153552F600A02D52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		03D9DE36153552F600A02D52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		03D9DE38153552F600A02D52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SlideyMenuGuy/SlideyMenuGuy-Prefix.pch";
+				INFOPLIST_FILE = "SlideyMenuGuy/SlideyMenuGuy-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		03D9DE39153552F600A02D52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SlideyMenuGuy/SlideyMenuGuy-Prefix.pch";
+				INFOPLIST_FILE = "SlideyMenuGuy/SlideyMenuGuy-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		03D9DE10153552F600A02D52 /* Build configuration list for PBXProject "SlideyMenuGuy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03D9DE35153552F600A02D52 /* Debug */,
+				03D9DE36153552F600A02D52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03D9DE37153552F600A02D52 /* Build configuration list for PBXNativeTarget "SlideyMenuGuy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03D9DE38153552F600A02D52 /* Debug */,
+				03D9DE39153552F600A02D52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 03D9DE0D153552F600A02D52 /* Project object */;
+}
