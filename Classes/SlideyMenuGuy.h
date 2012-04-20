@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SlideyMenuGuy : NSObject
+@interface SlideyMenuGuy : NSObject<UIGestureRecognizerDelegate>
 
 - (id)init:(UIView*)holder withMain:(UIButton*)mainMenu withSubMenus:(NSArray*)subMenus;
 - (void) displayMenu;

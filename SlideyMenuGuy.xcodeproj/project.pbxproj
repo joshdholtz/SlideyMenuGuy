@@ -264,10 +264,15 @@
 		03D9DE38153552F600A02D52 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Josh Holtz (M57ML2945L)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Josh Holtz (M57ML2945L)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SlideyMenuGuy/SlideyMenuGuy-Prefix.pch";
 				INFOPLIST_FILE = "SlideyMenuGuy/SlideyMenuGuy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "CB30B398-2338-4BD8-847E-98B83E02F632";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "CB30B398-2338-4BD8-847E-98B83E02F632";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -275,10 +280,15 @@
 		03D9DE39153552F600A02D52 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Josh Holtz (M57ML2945L)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Josh Holtz (M57ML2945L)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SlideyMenuGuy/SlideyMenuGuy-Prefix.pch";
 				INFOPLIST_FILE = "SlideyMenuGuy/SlideyMenuGuy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "CB30B398-2338-4BD8-847E-98B83E02F632";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "CB30B398-2338-4BD8-847E-98B83E02F632";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -302,6 +312,7 @@
 				03D9DE39153552F600A02D52 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
