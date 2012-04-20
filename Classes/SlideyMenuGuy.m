@@ -20,6 +20,7 @@
 @property (nonatomic, strong) UISwipeGestureRecognizer *swipeLeft;
 @property (nonatomic, strong) UISwipeGestureRecognizer *swipeRight;
 @property (nonatomic, strong) UITapGestureRecognizer *tap;
+@property (nonatomic, strong) UITapGestureRecognizer *tapToClose;
 
 @end
 
@@ -35,6 +36,7 @@
 @synthesize swipeLeft = _swipeLeft;
 @synthesize swipeRight = _swipeRight;
 @synthesize tap = _tap;
+@synthesize tapToClose = _tapToClose;
 
 - (id)init:(UIView*)holder withMain:(UIButton*)mainMenu withSubMenus:(NSArray*)subMenus {
     self = [super init];
@@ -84,11 +86,25 @@
         [_tap setDelegate:self];
         [_wholeMenuView addGestureRecognizer:_tap];
         
+        _tapToClose = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(swipeRecognitionTapToClose:)];
+        //        [_swipeRight setDirection:UISwipeGestureRecognizerDirectionRight];
+        [_tapToClose setDelegate:self];
+        [_holder addGestureRecognizer:_tapToClose];
+        
     }
     return self;
 }
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
+    if (touch.view == _holder) {
+        NSLog(@"Tapping the holder - %f", _mainMenu.frame.origin.x);
+        if (_mainMenu.frame.origin.x == -60) {
+            return YES;
+        }
+    }
+    
+    return NO;
+    
 //    NSLog(@"gesture type - %@", [[gestureRecognizer class] description]);
 //    if ([gestureRecognizer isKindOfClass:[UITapGestureRecognizer class]]) {
 //        NSLog(@"We got tapped");
@@ -109,8 +125,6 @@
 //            [self expandMenu:gestureRecognizer];
 //        }
 //    }
-    
-    return NO;
 }
 
 - (void)swipeRecognitionSwipeLeft:(UISwipeGestureRecognizer*)sender {
@@ -125,6 +139,11 @@
 
 - (void)swipeRecognitionTap:(UITapGestureRecognizer*)sender {
     NSLog(@"Tap - %@", [[sender.view class] description]);
+}
+
+- (void)swipeRecognitionTapToClose:(UITapGestureRecognizer*)sender {
+    NSLog(@"Tap to close - %@", [[sender.view class] description]);
+    [self colapseMenu:sender];
 }
 
 - (void) displayMenu {
