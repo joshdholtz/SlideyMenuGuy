@@ -58,7 +58,6 @@
         }
         
         _wholeMenuView = [[UIView alloc] initWithFrame:CGRectMake(0, y, holder.frame.size.width, 50)];
-        [_wholeMenuView setBackgroundColor:[UIColor purpleColor]];
         [_holder addSubview:_wholeMenuView];
         
         
@@ -86,17 +85,12 @@
         [_tap setDelegate:self];
         [_wholeMenuView addGestureRecognizer:_tap];
         
-        _tapToClose = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(swipeRecognitionTapToClose:)];
-        //        [_swipeRight setDirection:UISwipeGestureRecognizerDirectionRight];
-        [_tapToClose setDelegate:self];
-        [_holder addGestureRecognizer:_tapToClose];
-        
     }
     return self;
 }
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
-    if (touch.view == _holder) {
+    if (touch.view == _clearLayer) {
         NSLog(@"Tapping the holder - %f", _mainMenu.frame.origin.x);
         if (_mainMenu.frame.origin.x == -60) {
             return YES;
@@ -104,27 +98,6 @@
     }
     
     return NO;
-    
-//    NSLog(@"gesture type - %@", [[gestureRecognizer class] description]);
-//    if ([gestureRecognizer isKindOfClass:[UITapGestureRecognizer class]]) {
-//        NSLog(@"We got tapped");
-//    } else if ([gestureRecognizer isKindOfClass:[UISwipeGestureRecognizer class]]) {
-//        NSLog(@"We got swyped");
-//    }
-//    
-//    
-//    NSLog(@"Touch - %@", [[touch.view class] description]);
-//    if ([touch.view isKindOfClass:[UIButton class]]) {
-//        return NO;
-//    } else {
-//        if (gestureRecognizer == _swipeLeft) {
-//            NSLog(@"Swipe left");
-//            [self colapseMenu:gestureRecognizer];
-//        } else if (gestureRecognizer == _swipeRight) {
-//            NSLog(@"Swipe right");
-//            [self expandMenu:gestureRecognizer];
-//        }
-//    }
 }
 
 - (void)swipeRecognitionSwipeLeft:(UISwipeGestureRecognizer*)sender {
@@ -158,10 +131,17 @@
     
     [_mainMenu removeTarget:self action:@selector(expandMenu:) forControlEvents:UIControlEventTouchUpInside];
     
-//    _clearLayer = [[UIButton alloc] initWithFrame:_holder.frame];
-//    [_clearLayer setBackgroundColor:[UIColor clearColor]];
-//    [_clearLayer addTarget:self action:@selector(colapseMenu:) forControlEvents:UIControlEventTouchUpInside];
-//    [_holder addSubview:_clearLayer];
+    if (_clearLayer == nil) {
+        _clearLayer = [[UIButton alloc] initWithFrame:CGRectMake(_holder.bounds.origin.x, _holder.bounds.origin.y, _holder.bounds.size.width, (_holder.bounds.size.height - 50))];
+        [_clearLayer setBackgroundColor:[UIColor clearColor]];
+  
+        _tapToClose = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(swipeRecognitionTapToClose:)];
+        [_tapToClose setDelegate:self];
+        [_clearLayer addGestureRecognizer:_tapToClose];
+        [_holder addSubview:_clearLayer];
+    } else {
+        [_clearLayer setHidden:NO];
+    }
     
     float x = -60;
     float y = 0;
@@ -197,7 +177,7 @@
     
     [_mainMenu addTarget:self action:@selector(expandMenu:) forControlEvents:UIControlEventTouchUpInside];
     
-//    [_clearLayer removeFromSuperview];
+    [_clearLayer setHidden:YES];
     
     float x = 0;
     float y = 0;
